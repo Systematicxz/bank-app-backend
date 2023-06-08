@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 //rutas
-app.use('/api/vi/users', usersRouter);
+app.use('/api/v1/users', usersRouter);
 app.use('/api/v1/transfers', transfersRoutes);
 
 module.exports = app;

@@ -19,7 +19,7 @@ const Transfer = db.define('transfers', {
     allowNull: false,
   },
   receiverUserId: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false,
   },
 });

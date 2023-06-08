@@ -28,9 +28,9 @@ const User = db.define('users', {
     defaultValue: 1000,
   },
   status: {
-    type: DataTypes.BOOLEAN,
+    type: DataTypes.ENUM('active', 'disabled'),
     allowNull: false,
-    defaultValue: true,
+    defaultValue: 'active',
   },
 });
 

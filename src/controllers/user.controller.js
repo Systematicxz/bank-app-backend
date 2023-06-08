@@ -45,6 +45,12 @@ exports.login = async (req, res) => {
         message: 'Usuario no encontrado',
       });
     }
+    if (!accountNumber) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'Falta el número de cuenta',
+      });
+    }
 
     res.status(200).json({
       status: 'success',
