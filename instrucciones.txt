@@ -1,0 +1,29 @@
+1 recibir el amount, accountNumber, senderUserId de req.body
+
+//   const { amount, accountNumber, senderUserId } = req.body;
+
+2 userReceiver con findOne  buscar el usuario que va a recibir el monto donde el status: true donde el accountNumber: accountNumber
+
+
+3 crear una constante que se llame receiverUserId = userReceiver.id
+
+4 userMakeTransfer  buscar al usuario que va a hacer la transferencia con el senderUserId
+
+5 verificar si el monto a transferir es mayor al monto que tiene el userMakeTransfer si es asi enviar un error 400
+//ejemplo
+// if(amount > userMakeTransfer.amount)
+
+6 verificar si el id del usuario que recive es igual al id del usuario que envia, si es igual enviar error
+
+7 crear una constante que se llame newAmountUserMakeTransfer trendra el resultado de la resta entre el monto que tiene el usuario menos el monto que se recive de la req.body
+
+8 crear una constante que se llame newAmountUserReceiver y tendra el resultado de la suma entre el monto que tiene el usuario en la cuenta mas el monto que se recibe de la req.body
+
+9 actualizar la info del usuario que envia con su nuevo amount
+
+
+10 actualizar la info que recive con su nuevo amount
+
+11 guardar o crear la transferencia en la base de datos transfers
+
+12 enviar la R al cliente que diga que la transfer se hizo correctamente
