@@ -8,7 +8,7 @@ const transferAmount = async (req, res) => {
   //2
   const userReceiver = await User.findOne({
     where: {
-      status: 'true',
+      status: 'active',
       accountNumber: accountNumber,
     },
   });
@@ -19,7 +19,7 @@ const transferAmount = async (req, res) => {
   //4
   const userMakeTransfer = await User.findOne({
     where: {
-      status: 'true',
+      status: 'active',
       id: senderUserId,
     },
   });

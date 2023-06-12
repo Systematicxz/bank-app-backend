@@ -35,7 +35,7 @@ exports.login = async (req, res) => {
       where: {
         accountNumber,
         password,
-        status: 'true',
+        status: 'active',
       },
     });
 
